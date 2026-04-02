@@ -1,7 +1,7 @@
 // Admin.jsx
 import Navbar from "../components/Navbar";
 import "./Admin.css";
-import AdminPerson from "./AdminPerson";
+import AdminPerson from "./Admin/AdminPerson";
 
 function Admin() {
   return (

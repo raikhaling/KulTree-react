@@ -5,18 +5,19 @@ import {
   createPerson,
   updatePerson,
   deletePerson,
-} from "../services/personService";
-import "./AdminPerson.css"; // Make sure this file exists
+} from "../../services/personService";
+import "./AdminPerson.css";
 
 function AdminPerson() {
   const [persons, setPersons] = useState([]);
   const [form, setForm] = useState({
     fullName: "",
+    nickName: "",
     dateOfBirth: "",
     gender: "MALE",
     location: "",
     personalInfo: "",
-    fatheId: "",
+    fatherId: "",
     motherId: "",
     imageUrl: "",
   });
@@ -50,11 +51,12 @@ function AdminPerson() {
       }
       setForm({
         fullName: "",
+        nickName: "",
         dateOfBirth: "",
         gender: "MALE",
         location: "",
         personalInfo: "",
-        fatheId: "",
+        fatherId: "",
         motherId: "",
         imageUrl: "",
       });
@@ -69,11 +71,12 @@ function AdminPerson() {
   const handleEdit = (person) => {
     setForm({
       fullName: person.fullName || "",
+      nickName: person.nickName || "",
       dateOfBirth: person.dateOfBirth || "",
       gender: person.gender || "MALE",
       location: person.location || "",
       personalInfo: person.personalInfo || "",
-      fatheId: person.fatheId || "",
+      fatherId: person.fatherId || "",
       motherId: person.motherId || "",
       imageUrl: person.imageUrl || "",
     });
@@ -98,6 +101,14 @@ function AdminPerson() {
           name="fullName"
           placeholder="Full Name"
           value={form.fullName}
+          onChange={handleChange}
+          required
+        />
+        <input
+          type="text"
+          name="nickName"
+          placeholder="nickName"
+          value={form.nickName}
           onChange={handleChange}
           required
         />
@@ -129,9 +140,9 @@ function AdminPerson() {
         />
         <input
           type="number"
-          name="fatheId"
+          name="fatherId"
           placeholder="Father ID"
-          value={form.fatheId}
+          value={form.fatherId}
           onChange={handleChange}
         />
         <input
@@ -157,6 +168,7 @@ function AdminPerson() {
           <tr>
             <th>ID</th>
             <th>Full Name</th>
+            <th>Nickname</th>
             <th>DOB</th>
             <th>Gender</th>
             <th>Location</th>
@@ -168,6 +180,7 @@ function AdminPerson() {
             <tr key={person.id}>
               <td>{person.id}</td>
               <td>{person.fullName}</td>
+              <td>{person.nickName}</td>
               <td>{person.dateOfBirth}</td>
               <td>{person.gender}</td>
               <td>{person.location}</td>

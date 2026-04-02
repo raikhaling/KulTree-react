@@ -3,7 +3,7 @@ import API from "./api";
 
 export const getAllPersons = async () => {
   const response = await API.get("/admin/person");
-  return response.data.data; // because your ApiResponse wraps data
+  return response.data.data;
 };
 
 export const getPerson = async (id) => {
