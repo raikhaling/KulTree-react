@@ -1,0 +1,102 @@
+/* AdminPerson.css */
+
+/* Container styling */
+.admin-person-container {
+  max-width: 900px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Heading */
+.admin-person-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Form styling */
+.admin-person-container form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-bottom: 30px;
+  justify-content: space-between;
+}
+
+.admin-person-container form input,
+.admin-person-container form select {
+  flex: 1 1 45%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.admin-person-container form button {
+  padding: 10px 20px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  flex: 1 1 100%;
+  transition: background-color 0.3s;
+}
+
+.admin-person-container form button:hover {
+  background-color: #45a049;
+}
+
+/* Table styling */
+.admin-person-container table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.admin-person-container table th,
+.admin-person-container table td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: left;
+}
+
+.admin-person-container table th {
+  background-color: #f2f2f2;
+}
+
+.admin-person-container table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.admin-person-container table tr:hover {
+  background-color: #f1f1f1;
+}
+
+/* Action buttons */
+.admin-person-container table button {
+  padding: 5px 10px;
+  margin-right: 5px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  color: white;
+  transition: background-color 0.3s;
+}
+
+.admin-person-container table button:first-child {
+  background-color: #2196f3; /* Edit button */
+}
+
+.admin-person-container table button:first-child:hover {
+  background-color: #0b7dda;
+}
+
+.admin-person-container table button:last-child {
+  background-color: #f44336; /* Delete button */
+}
+
+.admin-person-container table button:last-child:hover {
+  background-color: #da190b;
+}
